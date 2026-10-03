@@ -26,12 +26,10 @@ $string['active'] = 'Active';
 $string['active30'] = 'Active days in the last 30 days: {$a}';
 $string['activitysettings'] = 'What counts as study';
 $string['activitysettings_desc'] = 'These are site defaults. Teachers can override them in the block settings for each course.';
-
 $string['blocksettings'] = 'Study consistency settings';
 $string['customevents'] = 'Custom Moodle events';
 $string['customevents_desc'] = 'One fully qualified event class per line, for example \\mod_lesson\\event\\lesson_ended.';
 $string['customevents_help'] = 'One fully qualified event class per line, for example \\mod_lesson\\event\\lesson_ended.';
-
 $string['daymode'] = 'Ignored days';
 $string['daymode_custom'] = 'Ignore selected weekdays';
 $string['daymode_desc'] = 'Choose whether all weekdays are required or some days should not break a streak.';
@@ -41,16 +39,13 @@ $string['event_personal_record_reached'] = 'Personal streak record reached';
 $string['event_streak_broken'] = 'Personal streak broken';
 $string['event_streak_continued'] = 'Personal streak continued';
 $string['event_streak_milestone_reached'] = 'Personal streak milestone reached';
-
 $string['event_streak_started'] = 'Personal streak started';
 $string['ignored'] = 'Ignored day';
 $string['ignoreweekdays'] = 'Weekdays to ignore';
 $string['ignoreweekdays_desc'] = 'For custom mode, use ISO weekday numbers 1 to 7 separated by commas, where Monday is 1 and Sunday is 7.';
 $string['inactive'] = 'No activity';
 $string['last30days'] = 'Your last 30 days';
-
 $string['milestonerewardlabel'] = 'Personal streak milestone: {$a} days';
-
 $string['milestones'] = 'Milestones';
 $string['milestones_desc'] = 'One milestone per line using days|xp|credits|badgeid|event|visual. Example: 7|50|20|0|1|1. Set a value to 0 to disable that reward. The default milestones are visual only.';
 $string['milestones_help'] = 'One milestone per line using days|xp|credits|badgeid|event|visual. Example: 7|50|20|0|1|1. Set a value to 0 to disable that reward. The default milestones are visual only.';
@@ -63,7 +58,6 @@ $string['personalstreak:manage'] = 'Manage personal study streak settings';
 $string['personalstreak:myaddinstance'] = 'Add a personal study streak block to Dashboard';
 $string['personalstreak:viewown'] = 'View own study streak';
 $string['pluginname'] = 'Personal study streak';
-
 $string['privacy:metadata:days'] = 'Stores consolidated daily study activity for personal streak calculations.';
 $string['privacy:metadata:days:activitycount'] = 'Number of qualifying study events recorded that day.';
 $string['privacy:metadata:days:courseid'] = 'The course where study activity occurred.';
@@ -94,12 +88,10 @@ $string['protection_one'] = 'One tolerated day per streak';
 $string['protection_rolling'] = 'N tolerated days in a rolling period';
 $string['protectiondays'] = 'Tolerated days';
 $string['protectiondays_desc'] = 'Maximum protected missed days inside the configured rolling period.';
-
 $string['protectionmode'] = 'Streak protection';
 $string['protectionmode_desc'] = 'Protection does not create fake activity. It only prevents a missed required day from resetting the existing streak.';
 $string['protectionperiod'] = 'Protection period in days';
 $string['protectionperiod_desc'] = 'Rolling window used to limit tolerated missed days.';
-
 $string['streakheadline'] = '{$a} days of continuous learning';
 $string['studiedtoday'] = 'You studied today.';
 $string['today'] = 'Today';
