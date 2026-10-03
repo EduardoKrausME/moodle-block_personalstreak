@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * classes/event/streak_milestone_reached.php for block_personalstreak.
@@ -30,11 +30,24 @@ namespace block_personalstreak\event;
  * @package block_personalstreak
  */
 class streak_milestone_reached extends base_streak_event {
+    /**
+     * get_name
+     *
+     * @return \lang_string|string
+     * @throws \coding_exception
+     */
     public static function get_name() {
         return get_string('event_streak_milestone_reached', 'block_personalstreak');
     }
+
+    /**
+     * get_description
+     *
+     * @return string
+     */
     public function get_description() {
         $days = isset($this->other['milestone']) ? (int)$this->other['milestone'] : 0;
-        return "The user with id '{$this->relateduserid}' reached the {$days}-day personal streak milestone in course '{$this->courseid}'.";
+        return "The user with id '{$this->relateduserid}' reached the {$days}-day personal streak milestone in course " .
+            "'{$this->courseid}'.";
     }
 }

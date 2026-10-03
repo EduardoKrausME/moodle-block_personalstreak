@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * tests/state_service_test.php for block_personalstreak.
@@ -35,8 +35,10 @@ use block_personalstreak\service\day_service;
  * @package block_personalstreak
  * @covers \block_personalstreak\service\state_service
  */
-class state_service_test extends \advanced_testcase {
-    /** A new best streak emits one personal-record event. */
+final class state_service_test extends \advanced_testcase {
+    /**
+     * A new best streak emits one personal-record event.
+     */
     public function test_personal_record_reached(): void {
         global $DB;
 
@@ -61,7 +63,9 @@ class state_service_test extends \advanced_testcase {
         $this->assertSame(2, (int)$records[0]->other['record']);
     }
 
-    /** Configured milestone event is emitted once when the threshold is crossed. */
+    /**
+     * Configured milestone event is emitted once when the threshold is crossed.
+     */
     public function test_milestone_reached(): void {
         global $DB;
 

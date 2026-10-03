@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * block_personalstreak.php for block_personalstreak.
@@ -104,7 +104,7 @@ class block_personalstreak extends block_base {
      * @return stdClass
      */
     public function get_content() {
-        global $COURSE, $OUTPUT, $PAGE, $USER;
+        global $COURSE, $OUTPUT, $USER;
 
         if ($this->content !== null) {
             return $this->content;
@@ -150,7 +150,7 @@ class block_personalstreak extends block_base {
             'calendarlabel' => get_string('last30days', 'block_personalstreak'),
         ];
 
-        $PAGE->requires->js_call_amd('block_personalstreak/streak', 'init', ['[data-region="personalstreak"]']);
+        $this->page->requires->js_call_amd('block_personalstreak/streak', 'init', ['[data-region="personalstreak"]']);
         $this->content->text = $OUTPUT->render_from_template('block_personalstreak/content', $template);
         return $this->content;
     }

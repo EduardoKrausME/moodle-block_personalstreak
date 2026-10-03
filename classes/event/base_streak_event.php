@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * classes/event/base_streak_event.php for block_personalstreak.
@@ -30,7 +30,11 @@ namespace block_personalstreak\event;
  * @package block_personalstreak
  */
 abstract class base_streak_event extends \core\event\base {
-    /** @return void */
+    /**
+     * init
+     *
+     * @return void
+     */
     protected function init() {
         $this->data['crud'] = 'r';
         $this->data['edulevel'] = self::LEVEL_PARTICIPATING;

@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * tests/day_service_test.php for block_personalstreak.
@@ -32,8 +32,10 @@ use block_personalstreak\service\day_service;
  * @package block_personalstreak
  * @covers \block_personalstreak\service\day_service
  */
-class day_service_test extends \advanced_testcase {
-    /** User timezone decides the stored day, not server UTC. */
+final class day_service_test extends \advanced_testcase {
+    /**
+     * User timezone decides the stored day, not server UTC.
+     */
     public function test_user_timezone_daydate(): void {
         global $DB;
 
@@ -54,7 +56,9 @@ class day_service_test extends \advanced_testcase {
         $this->assertSame(20261003, (int)$record->daydate);
     }
 
-    /** Multiple events on one day are consolidated instead of creating duplicate day rows. */
+    /**
+     * Multiple events on one day are consolidated instead of creating duplicate day rows.
+     */
     public function test_multiple_events_same_day(): void {
         global $DB;
 

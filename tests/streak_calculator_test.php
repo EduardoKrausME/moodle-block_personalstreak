@@ -8,11 +8,11 @@
 //
 // Moodle is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU General Public License for more details.
 //
 // You should have received a copy of the GNU General Public License
-// along with Moodle. If not, see <https://www.gnu.org/licenses/>.
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
  * tests/streak_calculator_test.php for block_personalstreak.
@@ -32,7 +32,7 @@ use block_personalstreak\service\streak_calculator;
  * @package block_personalstreak
  * @covers \block_personalstreak\service\streak_calculator
  */
-class streak_calculator_test extends \advanced_testcase {
+final class streak_calculator_test extends \advanced_testcase {
     /**
      * Base config used by pure calculator tests.
      *
@@ -49,7 +49,9 @@ class streak_calculator_test extends \advanced_testcase {
         ], $overrides);
     }
 
-    /** Normal consecutive sequence. */
+    /**
+     * Normal consecutive sequence.
+     */
     public function test_normal_streak(): void {
         $state = streak_calculator::calculate(
             [20260929, 20260930, 20261001, 20261002, 20261003],
@@ -62,7 +64,9 @@ class streak_calculator_test extends \advanced_testcase {
         $this->assertSame(20261003, $state['longeststreakend']);
     }
 
-    /** A missed required day breaks the previous sequence. */
+    /**
+     * A missed required day breaks the previous sequence.
+     */
     public function test_streak_break(): void {
         $state = streak_calculator::calculate(
             [20261001, 20261002, 20261004],
@@ -74,7 +78,9 @@ class streak_calculator_test extends \advanced_testcase {
         $this->assertSame(20261004, $state['currentstreakstart']);
     }
 
-    /** Month boundaries are ordinary consecutive calendar days. */
+    /**
+     * Month boundaries are ordinary consecutive calendar days.
+     */
     public function test_month_rollover(): void {
         $state = streak_calculator::calculate(
             [20260929, 20260930, 20261001, 20261002],
@@ -85,7 +91,9 @@ class streak_calculator_test extends \advanced_testcase {
         $this->assertSame(4, $state['beststreak']);
     }
 
-    /** Ignored weekends neither increment nor break the sequence. */
+    /**
+     * Ignored weekends neither increment nor break the sequence.
+     */
     public function test_ignored_weekend(): void {
         $state = streak_calculator::calculate(
             [20261002, 20261005],
@@ -96,7 +104,9 @@ class streak_calculator_test extends \advanced_testcase {
         $this->assertSame(2, $state['beststreak']);
     }
 
-    /** Protection preserves the streak without inventing an active day. */
+    /**
+     * Protection preserves the streak without inventing an active day.
+     */
     public function test_one_day_protection(): void {
         $state = streak_calculator::calculate(
             [20261001, 20261003],
@@ -109,7 +119,9 @@ class streak_calculator_test extends \advanced_testcase {
     }
 
 
-    /** The current day is not a missed day until it has ended. */
+    /**
+     * The current day is not a missed day until it has ended.
+     */
     public function test_current_day_without_activity_does_not_break_streak(): void {
         $state = streak_calculator::calculate(
             [20261001, 20261002],
@@ -120,7 +132,9 @@ class streak_calculator_test extends \advanced_testcase {
         $this->assertSame(20261002, $state['currentstreakend']);
     }
 
-    /** Rolling protection respects the configured allowance inside its period. */
+    /**
+     * Rolling protection respects the configured allowance inside its period.
+     */
     public function test_rolling_protection_limit(): void {
         $config = $this->config([
             'protectionmode' => 'rolling',
