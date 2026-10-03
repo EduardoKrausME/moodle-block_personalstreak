@@ -22,6 +22,8 @@
  * @license    https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+defined('MOODLE_INTERNAL') || die;
+
 $string['active'] = 'Active';
 $string['active30'] = 'Active days in the last 30 days: {$a}';
 $string['activitysettings'] = 'What counts as study';
