@@ -1,0 +1,34 @@
+{{!
+    @template block_personalstreak/content
+
+    Personal-only streak summary and 30-day activity calendar.
+}}
+<div class="block_personalstreak" data-region="personalstreak">
+    <div class="streak-summary">
+        <div class="streak-headline">
+            <span class="streak-flame" aria-hidden="true">🔥</span>
+            <strong>{{headline}}</strong>
+        </div>
+        <div class="streak-today {{#active_today}}is-active{{/active_today}}">{{todaymessage}}</div>
+        <div class="streak-metrics">
+            <span>{{bestlabel}}</span>
+            <span>{{active30label}}</span>
+        </div>
+    </div>
+
+    {{#hasnextmilestone}}
+        <div class="streak-next">
+            <span class="streak-next-label">{{#str}}nextmilestone, block_personalstreak{{/str}}</span>
+            <strong>{{nextmilestonelabel}}</strong>
+        </div>
+    {{/hasnextmilestone}}
+
+    <div class="streak-calendar" aria-label="{{calendarlabel}}">
+        {{#calendar}}
+            <button type="button" class="{{class}}" data-detail="{{detail}}" aria-label="{{detail}}">
+                <span aria-hidden="true">{{day}}</span>
+            </button>
+        {{/calendar}}
+    </div>
+    <div class="streak-day-detail" data-region="day-detail" aria-live="polite"></div>
+</div>
