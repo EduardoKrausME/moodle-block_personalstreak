@@ -26,7 +26,7 @@ defined('MOODLE_INTERNAL') || die;
 
 $observers = [
     [
-        'eventname' => '\\core\\event\\base',
+        'eventname' => '*',
         'callback' => '\\block_personalstreak\\observer::observe',
         'priority' => -1000,
         'internal' => true,
