@@ -25,7 +25,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $plugin->release = '1.0.4';
-$plugin->version = 2026100502;
+$plugin->version = 2026100503;
 $plugin->component = 'block_personalstreak';
 $plugin->requires = 2022112800; // Moodle 4.1.
 $plugin->maturity = MATURITY_BETA;
