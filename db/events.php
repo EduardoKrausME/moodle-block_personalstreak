@@ -26,7 +26,61 @@ defined('MOODLE_INTERNAL') || die;
 
 $observers = [
     [
-        'eventname' => '\\core\\event\\base',
+        'eventname' => '\\core\\event\\course_viewed',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\core\\event\\course_module_completion_updated',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_assign\\event\\assessable_submitted',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_quiz\\event\\attempt_submitted',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_forum\\event\\post_created',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_resource\\event\\course_module_viewed',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_page\\event\\course_module_viewed',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_book\\event\\course_module_viewed',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_url\\event\\course_module_viewed',
+        'callback' => '\\block_personalstreak\\observer::observe',
+        'priority' => -1000,
+        'internal' => true,
+    ],
+    [
+        'eventname' => '\\mod_folder\\event\\course_module_viewed',
         'callback' => '\\block_personalstreak\\observer::observe',
         'priority' => -1000,
         'internal' => true,
