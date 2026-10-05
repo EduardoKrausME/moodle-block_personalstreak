@@ -62,7 +62,7 @@ class state_service {
             'courseid' => $courseid,
         ]);
 
-        $record = $old ?: (object)[
+        $record = $old ? clone $old : (object)[
             'userid' => $userid,
             'courseid' => $courseid,
             'currentstreak' => 0,
