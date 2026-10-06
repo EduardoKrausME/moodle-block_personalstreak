@@ -14,6 +14,14 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
+ * streak.js
+ *
+ * @package   block_personalstreak
+ * @copyright 2026 Eduardo Kraus {@link https://eduardokraus.com}
+ * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+/**
  * Small interaction helper for the personal activity calendar.
  *
  * @module block_personalstreak/streak
