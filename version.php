@@ -28,7 +28,7 @@ $plugin->release = '1.0.4';
 $plugin->version = 2026100503;
 $plugin->component = 'block_personalstreak';
 $plugin->requires = 2022112800; // Moodle 4.1.
-$plugin->maturity = MATURITY_BETA;
+$plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
     'local_personalxp' => 2026093002,
 ];
