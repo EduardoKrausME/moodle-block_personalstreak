@@ -24,10 +24,10 @@
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->release = '1.0.8';
-$plugin->version = 2026101500;
+$plugin->version = 2026101501;
+$plugin->release = '1.0.9';
 $plugin->component = 'block_personalstreak';
-$plugin->requires = 2022112800; // Moodle 4.1.
+$plugin->requires = 2022112800;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->dependencies = [
     'local_personalxp' => 2026093002,
